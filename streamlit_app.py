@@ -79,7 +79,7 @@ def calcem():
 
 def main():
     pre_election_difference_df, other_years_difference_df, pre_election_avg, other_years_avg = calcem()
-    st.title("Stock Analysis App")
+    st.title("Santa rally deviation on pre-election years")
 
     # Display the results using Streamlit widgets
     st.subheader("Pre-election Years Average Percentage Difference:")
