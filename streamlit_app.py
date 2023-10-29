@@ -82,18 +82,11 @@ def main():
     st.title("Stock Analysis App")
 
     # Display the results using Streamlit widgets
-
     st.subheader("Pre-election Years Average Percentage Difference:")
     st.write("{:.2f}%".format(pre_election_avg))
 
     st.subheader("Other Years Average Percentage Difference:")
     st.write("{:.2f}%".format(other_years_avg))
-
-    st.subheader("Pre-election Years Difference:")
-    st.write(pre_election_difference_df)
-
-    st.subheader("Other Years Difference:")
-    st.write(other_years_difference_df)
 
     # Line chart for pre-election years
     st.subheader("Line Chart for Pre-election Years Difference")
@@ -102,6 +95,13 @@ def main():
     # Line chart for other years
     st.subheader("Line Chart for Other Years Difference")
     st.line_chart(other_years_difference_df.set_index('Date'))
+
+    # Dataframe data in table presentation
+    st.subheader("Pre-election Years Difference:")
+    st.write(pre_election_difference_df)
+
+    st.subheader("Other Years Difference:")
+    st.write(other_years_difference_df)
 
 if __name__ == "__main__":
     main()
