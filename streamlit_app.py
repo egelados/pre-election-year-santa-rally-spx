@@ -74,8 +74,11 @@ def calcem():
     # Calculate the average of the "Percentage Difference" column for other years
     other_years_avg = other_years_difference_df['Percentage Difference'].mean()
 
+    return(pre_election_difference_df, other_years_difference_df, pre_election_avg, other_years_avg)
+
 
 def main():
+    pre_election_difference_df, other_years_difference_df, pre_election_avg, other_years_avg = calcem()
     st.title("Stock Analysis App")
 
     # Display the results using Streamlit widgets
